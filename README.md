@@ -1,1 +1,1 @@
-# game-genius-js
+# Jogo Genius
