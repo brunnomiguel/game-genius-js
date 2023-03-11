@@ -1,0 +1,23 @@
+body,
+main,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+button,
+ul,
+li,
+ol,
+p,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
