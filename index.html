@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" type="image" href="./img/genius.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link rel="stylesheet" href="./src/reset.css" />
+
+    <title>Genius's Kenzie</title>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <img src="./img/genius-logo.png" alt="" />
+    </header>
+
+    <main class="principal">
+      <section class="lista-principal">
+        <div class="lista-principal__cor0"></div>
+        <div class="lista-principal__cor1"></div>
+        <div class="lista-principal__cor2"></div>
+        <div class="lista-principal__cor3"></div>
+
+        <section class="secao-inicio">
+          <div class="secao-inicio__container">
+            <p class="secao-inicio__container-resposta">GENIUS KENZIE</p>
+          </div>
+        </section>
+      </section>
+
+      <section class="resultado">
+        <div class="secao-jogador">
+          <input
+            id="nome"
+            type="text"
+            name="nome"
+            class="secao-jogador__nome"
+            placeholder="Digite o seu nome"
+            required
+          />
+          <input
+            id="jogar"
+            type="button"
+            onclick="jogar()"
+            value="Comece a jogar"
+            class="secao-jogador__jogar"
+          />
+        </div>
+        <div class="resultado__acertos">
+          <p class="resultado__acertos-titulo">ACERTOS:</p>
+          <span class="resultado__acertos-valor"></span>
+        </div>
+        <h3 class="top-titulo">Ranking Top 3</h3>
+        <div class="resultado__maior-pontuacao resultado-container"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Desenvolvido por
+        <a target="_blank" href="https://github.com/brunnomiguel"
+          >Brunno Miguel</a
+        >
+        e
+        <a target="_blank" href="https://github.com/fernandaconstancia"
+          >Fernanda Constancia</a
+        >
+      </p>
+    </footer>
+
+    <script src="./src/script.js"></script>
+  </body>
+</html>

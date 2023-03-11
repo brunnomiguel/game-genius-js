@@ -1,0 +1,418 @@
+:root {
+  --cor-resultado: #fef7eb;
+  --cor1: #0597f2;
+  --cor2: #49d907;
+  --cor3: #eaf205;
+  --cor4: #f20707;
+  --cor-rover-resultado: #e6b7e8;
+  --cor-rover-1: #96befa;
+  --cor-rover-2: #b0e8bd;
+  --cor-rover-3: #fdf2af;
+  --cor-rover-4: #ffd5b8;
+  --cor-fundo: #ebe6c0;
+  --cor-sombra: #be9650;
+  --cor-footer: #947136;
+}
+
+body {
+  width: 100%;
+  max-height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: var(--cor-fundo);
+  font-family: "Oswald", sans-serif;
+}
+
+.cabecalho {
+  width: 100%;
+}
+.cabecalho img {
+  width: 150px;
+  display: block;
+  margin: 10px auto;
+}
+
+.principal {
+  width: 100%;
+  /* height: 100%; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.principal .lista-principal {
+  width: 340px;
+  height: 340px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  background-color: var(--cor-resultado);
+  border-radius: 100%;
+  box-shadow: 10px 8px 12px 3px var(--cor-sombra);
+
+  position: relative;
+}
+
+.principal .lista-principal .lista-principal__cor0,
+.principal .lista-principal .lista-principal__cor1,
+.principal .lista-principal .lista-principal__cor2,
+.principal .lista-principal .lista-principal__cor3 {
+  width: 47%;
+  height: 47%;
+  margin: 5px;
+}
+
+.principal .lista-principal .lista-principal__cor0 {
+  background-color: var(--cor1);
+  border-top-left-radius: 100%;
+}
+
+.principal .lista-principal .lista-principal__cor1 {
+  background-color: var(--cor2);
+  border-top-right-radius: 100%;
+}
+
+.principal .lista-principal .lista-principal__cor2 {
+  background-color: var(--cor3);
+  border-bottom-left-radius: 100%;
+}
+
+.principal .lista-principal .lista-principal__cor3 {
+  background-color: var(--cor4);
+  border-bottom-right-radius: 100%;
+}
+
+.active {
+  opacity: 0.5;
+}
+
+.principal .lista-principal .secao-inicio {
+  position: absolute;
+  top: 27%;
+  left: 27%;
+
+  width: 160px;
+  height: 160px;
+
+  border-radius: 100%;
+  background-color: var(--cor-resultado);
+}
+
+.principal .lista-principal .secao-inicio .secao-inicio__container {
+  width: 160px;
+  height: 160px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.principal
+  .lista-principal
+  .secao-inicio
+  .secao-inicio__container
+  .secao-inicio__container-resposta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  width: 130px;
+  height: 130px;
+
+  border-radius: 50%;
+
+  background-color: var(--cor-resultado);
+
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.principal .resultado {
+  width: 360px;
+
+  margin: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.principal .resultado .secao-jogador {
+  width: 100%;
+
+  padding: 5px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.principal .resultado .secao-jogador .secao-jogador__nome {
+  width: 80%;
+  height: 30px;
+
+  margin: 10px;
+  padding: 6px;
+
+  border-radius: 6px;
+  border: 2px solid var(--cor-sombra);
+
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+}
+
+.principal .resultado .secao-jogador .secao-jogador__jogar {
+  padding: 12px;
+  margin-bottom: 10px;
+
+  align-self: flex-end;
+
+  background-color: var(--cor-fundo);
+  border: 2px solid var(--cor-sombra);
+  border-radius: 6px;
+  box-shadow: 3px 6px 8px 1px var(--cor-sombra);
+
+  cursor: pointer;
+
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+}
+
+.principal .resultado .secao-jogador .secao-jogador__jogar:active {
+  transform: translate(0, 5px);
+  box-shadow: none;
+}
+
+.principal .resultado__acertos {
+  width: 80%;
+  height: 80px;
+
+  margin: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 3px 5px 12px var(--cor-sombra);
+  border-radius: 6px;
+}
+
+.principal .resultado__acertos .resultado__acertos-titulo {
+  font-size: 16px;
+}
+
+.principal .resultado__acertos .resultado__acertos-valor {
+  font-size: 30px;
+}
+
+.principal .resultado .top-titulo {
+  padding: 10px;
+}
+
+.principal .resultado__maior-pontuacao {
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 3px 5px 12px var(--cor-sombra);
+  border-radius: 6px;
+}
+
+.principal .resultado-container .resultado-container__top {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.principal .resultado-container .resultado-container__top .top {
+  padding: 10px;
+  font-size: 20px;
+}
+.principal .resultado-container .resultado-container__top .valor {
+  padding: 10px;
+  font-size: 20px;
+}
+
+footer {
+  text-align: center;
+  color: var(--cor-sombra);
+  text-shadow: 1px 10px 8px var(--cor-sombra);
+  margin: 3%;
+}
+
+footer p {
+  font-size: 18px;
+}
+
+footer p a {
+  font-size: 18px;
+}
+footer p a:hover {
+  color: var(--cor1);
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: linear-gradient(
+      to bottom,
+      var(--cor-resultado),
+      var(--cor-fundo),
+      var(--cor-sombra)
+    );
+  }
+  .cabecalho img {
+    width: 300px;
+  }
+  .principal {
+    flex-direction: row;
+  }
+  .principal .lista-principal {
+    width: 400px;
+    height: 400px;
+  }
+
+  .principal .lista-principal .lista-principal__cor0,
+  .principal .lista-principal .lista-principal__cor1,
+  .principal .lista-principal .lista-principal__cor2,
+  .principal .lista-principal .lista-principal__cor3 {
+    width: 47.5%;
+    height: 47.5%;
+  }
+
+  .principal .lista-principal .secao-inicio {
+    top: 26%;
+    left: 26%;
+
+    width: 200px;
+    height: 200px;
+
+    border-radius: 100%;
+    background-color: var(--cor-resultado);
+  }
+
+  .principal .lista-principal .secao-inicio .secao-inicio__container {
+    width: 200px;
+    height: 200px;
+  }
+  .principal
+    .lista-principal
+    .secao-inicio
+    .secao-inicio__container
+    .secao-inicio__container-resposta {
+    width: 160px;
+    height: 160px;
+  }
+
+  .principal .resultado {
+    flex-direction: column;
+
+    width: 250px;
+    margin: 50px;
+  }
+
+  .principal .resultado .secao-jogador {
+    width: 100%;
+    padding: 0;
+  }
+
+  .principal .resultado .secao-jogador .secao-jogador__nome {
+    width: 100%;
+    margin: 0;
+  }
+
+  .principal .resultado .secao-jogador .secao-jogador__jogar {
+    margin: 10px;
+  }
+
+  .principal .resultado__acertos {
+    width: 100%;
+  }
+
+  .principal .resultado__maior-pontuacao {
+    width: 100%;
+  }
+
+  footer {
+    color: var(--cor-footer);
+  }
+
+  footer p {
+    font-size: 20px;
+  }
+
+  footer p a {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 956px) {
+  .secao-jogador {
+    margin-left: 0;
+    margin-top: 10%;
+  }
+
+  .secao-jogador .secao-jogador__nome {
+    width: 70%;
+    height: 30px;
+
+    margin: 10px;
+    padding: 6px;
+
+    border-radius: 6px;
+    border: 2px solid var(--cor-sombra);
+  }
+
+  .principal .lista-principal {
+    width: 500px;
+    height: 500px;
+  }
+
+  .principal .lista-principal .secao-inicio {
+    width: 250px;
+    height: 250px;
+  }
+  .principal .lista-principal .secao-inicio .secao-inicio__container {
+    width: 250px;
+    height: 250px;
+  }
+  .principal
+    .lista-principal
+    .secao-inicio
+    .secao-inicio__container
+    .secao-inicio__container-resposta {
+    width: 200px;
+    height: 200px;
+
+    font-size: 20px;
+  }
+
+  .principal .resultado {
+    margin: 90px;
+  }
+
+  footer p {
+    font-size: 25px;
+  }
+
+  footer p a {
+    font-size: 25px;
+  }
+}
